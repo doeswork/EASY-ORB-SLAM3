@@ -1,0 +1,11 @@
+# Ignore build, install, and log folders
+/build/
+/install/
+/log/
+
+# Ignore specific files
+.env
+CameraTrajectory.txt
+KeyFrameTrajectory.txt
+
+src/orbslam3_ros2/vocabulary/ORBvoc.txt
