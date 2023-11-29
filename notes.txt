@@ -1,0 +1,13 @@
+source /opt/ros/foxy/setup.bash
+source install/setup.bash
+
+colcon build --symlink-install --packages-select orbslam3
+colcon build --packages-select orbslam3 --symlink-install
+
+ros2 topic list
+ros2 node list
+ros2 run rqt_graph
+
+ros2 run orbslam3 mono src/orbslam3_ros2/vocabulary/ORBvoc.txt src/orbslam3_ros2/config/monocular/TUM1.yaml
+ros2 run orbslam3 url_camera_publisher.py
+    or camera_publisher.py

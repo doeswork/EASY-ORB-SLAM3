@@ -19,6 +19,7 @@ class CameraPublisher(Node):
         ret, frame = self.cap.read()
         if ret:
             msg = self.bridge.cv2_to_imgmsg(frame, 'bgr8')
+            msg.header.stamp = self.get_clock().now().to_msg()  # Set the current time as the timestamp
             self.publisher_.publish(msg)
 
 def main(args=None):

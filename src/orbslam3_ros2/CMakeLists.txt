@@ -23,6 +23,7 @@ find_package(message_filters REQUIRED)
 find_package(Sophus REQUIRED)
 find_package(Pangolin REQUIRED)
 find_package(ORB_SLAM3 REQUIRED)
+find_package(rclpy REQUIRED)
 
 include_directories(
   include
@@ -68,6 +69,7 @@ install(TARGETS mono rgbd stereo stereo-inertial
 
 install(PROGRAMS
   src/camera_publisher.py
+  src/url_camera_publisher.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

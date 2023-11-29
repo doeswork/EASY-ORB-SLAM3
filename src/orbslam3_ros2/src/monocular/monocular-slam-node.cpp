@@ -31,6 +31,7 @@ void MonocularSlamNode::GrabImage(const ImageMsg::SharedPtr msg)
     try
     {
         m_cvImPtr = cv_bridge::toCvCopy(msg);
+        RCLCPP_INFO(this->get_logger(), "Received image at time: %ld", msg->header.stamp.sec);
     }
     catch (cv_bridge::Exception& e)
     {

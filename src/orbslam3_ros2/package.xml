@@ -16,7 +16,8 @@
   <depend>message_filters</depend>
   <depend>Pangolin</depend>
   <depend>rclpy</depend> 
-
+  <exec_depend>python3-requests</exec_depend>
+  
   <export>
     <build_type>ament_cmake</build_type>
   </export>
